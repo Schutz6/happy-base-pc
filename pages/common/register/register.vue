@@ -165,7 +165,8 @@
 						uni.setStorageSync("UserName", this.loginForm.mobile)
 						this.loading = true
 						uni.showLoading({
-							title: '正在注册'
+							title: '正在注册',
+							mask: true
 						})
 						this.$api.post("/register/", this.loginForm).then(res => {
 							this.loading = false
